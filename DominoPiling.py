@@ -1,0 +1,6 @@
+inPut = str(input())
+x=inPut.split()
+M=int(x[0])
+N=int(x[1])
+output = int(M*N/2)
+print(output)
