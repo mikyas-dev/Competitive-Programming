@@ -15,15 +15,15 @@ import sys
 
 def gradingStudents(grades):
     # Write your code here
-    grade = grades
-    for x in range(len(grade)) :
-        if grade[x]<38:
+    ans = grades
+    for i in range(len(grades)):
+        if ans[i] < 38:
             continue
         else:
-            y = 5*round(grade[x]/5)
-            if y>grade[x]:
-                grade[x]=y
-    return grade
+            temp=round(ans[i]/5)*5
+            if temp>ans[i]:
+                ans[i]=temp
+    return ans
         
 
 if __name__ == '__main__':
