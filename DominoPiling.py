@@ -1,6 +1,4 @@
-inPut = str(input())
-x=inPut.split()
-M=int(x[0])
-N=int(x[1])
-output = int(M*N/2)
-print(output)
+    data = str(input())
+    nums = data.split()
+    ans = int(nums[0])*int(nums[1])//2
+    print(ans)
