@@ -16,4 +16,5 @@ class Solution:
                 ans.append(True)
             else:
                 ans.append(False)
+                
         return ans
