@@ -12,18 +12,15 @@ import sys
 # The function accepts INTEGER_ARRAY a as parameter.
 #
 
-def countSwaps(a):
-    # Write your code here
-    count  = 0
-    n = len(a)
-    for i in range(n):
-        for j in range(0,n-1):
+count = 0
+    for i in range(len(a)):
+        for j in range(len(a)-1):
             if a[j]>a[j+1]:
-                count=count+1
                 a[j],a[j+1]=a[j+1],a[j]
+                count+=1
     print("Array is sorted in " + str(count) + " swaps.")
     print("First Element: "+str(a[0]))
-    print("Last Element: "+str(a[n-1]))
+    print("Last Element: "+str(a[-1]))
 
 if __name__ == '__main__':
     n = int(input().strip())
