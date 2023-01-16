@@ -1,18 +1,8 @@
-class Solution {
-    public int[] smallerNumbersThanCurrent(int[] nums) {
-        int[] ret = new int[nums.length];
-        for(int i=0;i<nums.length;i++)
-        {
-            int count=0;
-            for(int j=0;j<nums.length;j++)
-            {
-                if(nums[i]>nums[j])
-                {
-                    count++;
-                }
-            }
-            ret[i]=count;
-        }
-        return ret;
-    }
-}
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        ans=[]
+        numsCopy = nums.copy()
+        numsCopy.sort()
+        for i in nums:
+            ans.append(numsCopy.index(i))
+        return ans
