@@ -15,12 +15,10 @@ import sys
 
 def countingSort(arr):
     # Write your code here
-    count = [0]*100
-    for i in range(0,100):
-        for j in range(0,len(arr)):
-            if i ==arr[j]:
-                count[i]=count[i]+1
-    return count
+    ans = [0]*100
+    for i in arr:
+        ans[i]+=1
+    return ans
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
