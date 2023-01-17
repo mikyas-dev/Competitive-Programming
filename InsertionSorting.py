@@ -17,24 +17,16 @@ import sys
 def insertionSort1(n, arr):
     # Write your code here
     temp = arr[-1]
-    for i in range(n-2,-1,-1):
-        if arr[i]>temp:
-            arr[i+1]=arr[i]
-            for y in arr:
-                print(y,end=" ")
-        else:
-            arr[i+1]=temp
-            for y in arr:
-                print(y,end=" ")
-            break
-        if i == 0 and temp<arr[0]:
-            arr[i]=temp
-            print()
-            for y in arr:
-                print(y,end=" ")
-            
+    j=n-2
+    while arr[j]>temp and j>=0:
+        arr[j+1]=arr[j]
+        j-=1
+        for i in arr:
+            print(i,end=" ")
         print()
-
+    arr[j+1]=temp
+    for i in arr:
+        print(i,end=" ")
 if __name__ == '__main__':
     n = int(input().strip())
 
