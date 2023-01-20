@@ -1,9 +1,8 @@
 class Solution:
     def maxCoins(self, piles: List[int]) -> int:
         piles.sort(reverse=True)
-        n=len(piles)//3
         ans=0
-        for i in range(n):
-            c=2*i+1
-            ans+=piles[c]
+        for i in range(len(piles)//3):
+            j=2*i+1
+            ans+=piles[j]
         return ans
