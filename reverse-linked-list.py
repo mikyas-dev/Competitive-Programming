@@ -5,16 +5,8 @@
 #         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        ans = None
-        def rev(prev,curr):
-            nonlocal ans
-            if not curr :
-                ans = prev
-                return 
-
-            
-            first = curr
-            rev(first,first.next)
-            first.next = prev
-        rev(None,head)
-        return ans
+        answer=None
+        while head is not None:
+            answer=ListNode(head.val,answer)
+            head=head.next
+        return answer
